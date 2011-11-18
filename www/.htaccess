@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|m_index\.php|touch_index\.html|robots\.txt|gadget\.xml|amfGateway\.php)
+RewriteRule ^(.*)$ /m_panel/index.php/$1 [L]
+
+RewriteCond $1 !^(index\.php|m_index\.php|touch_index\.html|gadget\.xml|amfGateway\.php)
+RewriteRule ^(.*)$ /m_panel/m_index.php/$1 [L]

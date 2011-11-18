@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Module>
+	<ModulePrefs title="OpenSocial-jquery test">
+		<Require feature="opensocial-0.8" />
+		<Require feature="flash" />
+		<Require feature="dynamic-height" />
+		<Require feature="opensocial-payment" />
+		<Optional feature="content-rewrite">
+			<Param name="exclude-urls"></Param>
+			<Param name="exclude-urls">.*</Param>
+			<Param name="include-tags"></Param>
+		</Optional>
+	</ModulePrefs>
+	
+	<Content type="html" view="canvas">
+		<![CDATA[
+			
+			<script type="text/javascript" src="http://host.com/socialapp_php_sample/js/common_url.js"></script>
+			<link rel="stylesheet" href="http://host.com/socialapp_php_sample/css/main_style.css" type="text/css" media="all">
+			
+			<script type="text/javascript" src="http://host.com/socialapp_php_sample/js/opensocial-jquery.min.js"></script>
+			<script type="text/javascript" src="http://host.com/socialapp_php_sample/js/opensocial-jquery.mixi.js"></script>
+			<script type="text/javascript" src="http://host.com/socialapp_php_sample/js/opensocial-jquery.autoHeight.min.js"></script>
+			<script type="text/javascript" src="http://host.com/socialapp_php_sample/js/prettyprint.js"></script>
+			
+			<script type="text/javascript" src="http://host.com/socialapp_php_sample/js/main_script.js"></script>
+			
+			<div id="main_box">
+			
+				<div id="container"></div>
+				<div id="footer" align="center"></div>
+				<div id="output"></div>
+			</div>
+		]]>
+	</Content>
+	
+	<Content type="html" view="home"><![CDATA[
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(window).autoHeight();
+			}
+		</script>
+	]]></Content>
+	
+	<Content type="html" view="profile"><![CDATA[
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(window).autoHeight();
+			}
+		</script>
+	]]></Content>
+	
+	<Content type="url" view="mobile" href="http://host.com/socialapp_php_sample/m_index.php" />
+	<Content type="url" view="touch" href="http://host.com/socialapp_php_sample/touch_index.html" />
+</Module>
