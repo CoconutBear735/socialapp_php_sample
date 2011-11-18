@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Game_corner extends ELE_Controller {
+class Game_corner extends E_Controller {
 	
 	function __construct()
 	{
